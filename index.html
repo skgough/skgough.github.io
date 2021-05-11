@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width">
+
+  <title>Stephen Gough</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <meta name="description" content="The personal website of Stephen Gough.">
+  <meta property="og:title" content="Stephen Gough">
+  <meta property="og:description" content="The personal website of Stephen Gough.">
+  <meta property="og:image" content="assets/pro.jpg">
+  <meta property="og:image:alt" content="Stephen Gough">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="assets/summary_large_image.jpg">
+  <meta property="og:url" content="https://skgough.github.io/">
+  <link rel="canonical" href="https://skgough.github.io">
+  <base target="_blank">
+
+  <link rel="icon" href="assets/favicon.ico">
+  <script src='assets/swipe.min.js'></script>
+  <script defer src="script.js"></script>
+</head>
+
+<body>
+  <header>
+    <div></div>
+    <div>
+      <h1>Stephen Gough</h1>
+      <ul>
+        <li><img src='assets/mech.svg'>Mechanical engineer</li>
+        <li><img src='assets/code.svg'>Software engineer</li>
+      </ul>
+      <div class='links'>
+        <a href="mailto:skgough@gmail.com">skgough@gmail.com</a>
+        <a href="https://github.com/skgough/Resume/raw/main/resume.pdf">Resume</a>
+        <a href="https://www.linkedin.com/in/skgough"><img src='assets/LinkedIn.svg'></a>
+        <a href="https://github.com/skgough"><img src='assets/github.svg'></a>
+      </div>
+    </div>
+  </header>
+  <div class='projects'>
+    <h2>Projects</h2>
+    <div class='gotos'>
+      <button class='selected'>pi-display</button>
+      <button>homepage</button>
+      <button>Recipes</button>
+      <button>WebGL-Fluid-Simulation</button>
+      <button>yt-haiku-reader</button>
+    </div>
+    <div class='swipe'>
+      <div class='swipe-wrap'>
+        <article>
+          <h3><a href='https://github.com/skgough/pi-display'>pi-display</a></h3>
+          <p>This is a webpage that runs on a Raspberry Pi in front of my front door.</p>
+          <p><a href="https://skgough.github.io/pi-display/" rel="nofollow">Live here</a></p>
+          <figure><img
+              src="https://user-images.githubusercontent.com/44104194/117602232-27374180-b11e-11eb-99c2-f1d184b0edeb.jpg">
+          </figure>
+          <p>It shows the time, weather, and a QR code that configures the Wifi (if your phone supports it).</p>
+          <figure><img
+              src="https://user-images.githubusercontent.com/44104194/117602814-95303880-b11f-11eb-86ad-22d0c11dee40.png">
+          </figure>
+          <p>
+            This repo also has a bash script that pulls the latest version from GitHub and generates a javascript file
+            with an array of paths to the videos/images to display as a background. This way I can move large video
+            files over FTP without having to keep them in the repo. When I'm done adding changes (to code or
+            backgrounds) I SSH in and <code>kill -9 -1</code>. This restarts the X server and runs my startup script.
+          </p>
+        </article>
+        <article>
+          <h3><a href='https://github.com/skgough/homepage'>homepage</a></h3>
+          <p>My browser homepage that I use on a daily basis.</p>
+          <p><a href="https://skgough.github.io/homepage/" rel="nofollow">Live here</a></p>
+          <figure><img src="https://raw.githubusercontent.com/skgough/homepage/main/screenshot.png"></figure>
+          <p>
+            It shows the time, the weather for Chattanooga, TN, and has links to all of my most used websites. One
+            feature I'm particularly proud of is the search functionality I've built in using <a
+              href="https://en.m.wikipedia.org/wiki/Query_string#Structure">Query Strings</a>. Most websites implement
+            their search using query strings, so this feature is really powerful for things like searching price history
+            of Amazon listings on CamelCamelCamel.
+          </p>
+          <figure><img src="https://raw.githubusercontent.com/skgough/homepage/main/camelcamelcamel.gif"></figure>
+          <p>
+            Another cool feature are the searchable accordion lists that I'm using for subreddits. You can search by
+            subreddit name or URL. If the search is drilled down to only one result and you hit Enter, it will navigate
+            to that page. A really quick way to get to a specific subpage of a website that I enjoy using.
+          </p>
+        </article>
+        <article>
+          <h3><a href="https://github.com/skgough/Recipes">Recipes</a></h3>
+          <p><a href="https://skgough.github.io/Recipes" rel="nofollow">Live here</a></p>
+          <p>Simple webapp to use my recipes on my phone when I'm cooking.</p>
+          <figure><img
+              src="https://user-images.githubusercontent.com/44104194/117763603-15769c80-b1f9-11eb-8bab-a1e948f1bf95.png">
+          </figure>
+          <p>It has a nifty card view that makes it easy to go step by step in the recipe and reference ingredients
+            quickly without having to scroll up the page like lots of recipe websites make you do.</p>
+          <figure><img
+              src="https://user-images.githubusercontent.com/44104194/117763625-1dced780-b1f9-11eb-9cea-4f9b004b4f20.png">
+          </figure>
+          <p>//TODO
+            Make a timers feature that works even if the phone is locked. Might have to learn Service Workers to do
+            this.</p>
+        </article>
+        <article>
+          <h3><a href="https://github.com/skgough/WebGL-Fluid-Simulation">WebGL-Fluid-Simulation</a></h3>
+          <p>
+            Fork of <a
+              href='https://github.com/PavelDoGreat/WebGL-Fluid-Simulation'>PavelDoGreat/WebGL-Fluid-Simulation</a>.
+          </p>
+          <figure><img
+              src="https://user-images.githubusercontent.com/44104194/117605318-6b7a1000-b125-11eb-8758-45d20f3c98ab.png">
+          </figure>
+          <p>This fork adds a touch-friendly UI so that I can use this on my Raspberry Pi touchscreen display.</p>
+          <figure><img
+              src="https://user-images.githubusercontent.com/44104194/117605322-6cab3d00-b125-11eb-86c9-4c679cf4826f.png">
+          </figure>
+        </article>
+        <article>
+          <h3><a href="https://github.com/skgough/yt-haiku-reader">yt-haiku-reader</a></h3>
+          <p><a href="https://skgough.github.io/yt-haiku-reader/">Live here</a></p>
+          <p>This is a webapp I made to make using reddit on my desktop more enjoyable. It uses the Reddit rest API to
+            make an alternative frontend of r/YoutubeHaiku
+            that remembers the posts I've watched and allows me to hide them. My mobile reddit client allows me to do
+            this and it made sense that this should be a thing, but it wasn't,
+            so I made it.</p>
+          <figure><img
+              src="https://user-images.githubusercontent.com/44104194/117604141-9a42b700-b122-11eb-82e9-f30d568b3e09.png">
+          </figure>
+          <p>This project uses CSS Grid template areas, the async/Promise Fetch API and localStorage, which are all
+            concepts I hadn't fully explored until now and I had a lot of fun learning
+            how to use them to build this thing.</p>
+        </article>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

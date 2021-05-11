@@ -1,0 +1,205 @@
+@import url(assets/reset.css);
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+html {
+    font-family: 'Inter', sans-serif;
+    color: white;
+    background-image: url(assets/noise.png);
+    background-color: hsl(230, 10%, 20%);
+    background-position: center;
+}
+
+body {
+    max-width: 1200px;
+    margin: 0 auto;
+    min-height: 100vh;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 1ex;
+}
+header > div {
+    height: calc(50vw - 2ex);
+    max-height: calc(600px - 2ex);
+    flex: 1;
+    min-width: 30rem;
+    margin: 1ex;
+}
+header > div:first-child {
+    background-image: url(assets/pro.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    box-shadow: 0 0 10px 0 rgba(0,0,0,.7);
+}
+header > div:last-child {
+    display: flex;
+    flex-direction: column;
+    margin-left: 1ex;
+    box-shadow: 0 0 10px 0 rgba(0,0,0,.7);
+    background-image: url(assets/noise.png);
+    background-color: hsl(230, 10%, 30%);
+}
+header h1 {
+    font-size: 3rem;
+    font-weight: 600;
+    margin: 2.5rem 2rem 1.5rem 2rem;
+    filter: drop-shadow(2px 2px 4px black);
+}
+header ul {
+    font-size: 1.5rem;
+    font-family: monospace;
+    font-weight: 500;
+    line-height: 1.5;
+    margin: 0 0 0 4rem;
+    filter: drop-shadow(2px 2px 2px black);
+}
+header ul img {
+    margin-right: .75ex;
+    transform: translateY(.25ex);
+    user-select: none;
+}
+.links {
+    margin-top: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: space-around;
+}
+.links > a {
+    text-align: center;
+    flex-grow: 1;
+    font-size: 1.1rem;
+    line-height: 1;
+    font-weight: 500;
+    padding: 1em .5ex;
+    text-decoration: none;
+    box-sizing: border-box;
+    color: white;
+    filter: drop-shadow(0 2px 2px black);
+    transition: .2s background-color, .2s box-shadow;
+}
+.links > a img {
+    height: 1.1rem;
+    vertical-align: bottom;
+}
+.links > a:hover {
+    background-color: rgba(255,255,255,0.1);
+    box-shadow: inset 0 0 0 1px rgba(255,255,255,0.3);
+}
+.projects {
+    box-shadow: 0 0 10px 0 rgba(0,0,0,.7);
+    background-image: url(assets/noise.png);
+    background-color: hsl(230, 10%, 30%);
+    margin: 0 2ex 2ex 2ex;
+}
+.projects h2 {
+    font-size: 3rem;
+    font-weight: 600;
+    padding: 2.5rem 2rem 1.5rem 2rem;
+    filter: drop-shadow(2px 2px 4px black);
+}
+.gotos {
+    margin: 0 2rem;
+    display: flex;
+    overflow-x: auto;
+}
+.gotos button {
+    background: transparent;
+    border: 0;
+    text-align: center;
+    font-family: monospace;
+    flex-grow: 1;
+    font-size: 1.1rem;
+    line-height: 1;
+    padding: 1em;
+    white-space: nowrap;
+    text-decoration: none;
+    color: white;
+    filter: drop-shadow(0 2px 2px black);
+    border-bottom: 3px solid transparent;
+    transition: .2s background-color, .2s box-shadow;
+}
+.gotos button:hover {
+    background-color: rgba(255,255,255,0.1);
+    box-shadow: inset 0 0 0 1px rgba(255,255,255,0.3);
+}
+.gotos button.selected {
+    border-bottom: 3px solid white;
+}
+.swipe {
+    overflow: hidden;
+    visibility: hidden;
+    position: relative;
+    margin-top: 1rem;
+}
+.swipe-wrap {
+    overflow: hidden;
+    position: relative;
+}
+.swipe-wrap > article {
+    float: left;
+    width: 100%;
+    position: relative;
+    padding-bottom: 5rem;
+    
+}
+article > * {
+    margin: 0 2rem;
+    filter: drop-shadow(0 2px 2px black);
+}
+article a {
+    color: white;
+}
+article h3 {
+    margin: 2rem;
+}
+article h3 a {
+    font-family: monospace;
+    font-size: 2rem;
+}
+article p {
+    line-height: 1.5;
+    font-size: 1.1rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+article figure {
+    filter: none;
+}
+
+article img {
+    display: block;
+    max-width: 80%;
+    margin: 1rem auto;
+    box-shadow: 0 0 .5rem black;
+}
+
+@media (max-width: 500px) {
+    header h1 {
+        margin-top: 1rem;
+        font-size: 2rem;
+    }
+    header ul {
+        font-size: 1.15rem;
+        margin-left: 2rem;
+    }
+    header > div {
+        min-width: calc(100vw - 4ex);
+    }
+    header > div:last-child {
+        height: unset;
+    }
+    .links {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        padding: 0 1rem;
+    }
+    .links a {
+        padding: 1ex .5ex;
+        text-align: left;
+    }
+}
