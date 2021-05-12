@@ -17,18 +17,14 @@ body {
 
 header {
     display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    margin: 1ex;
+    margin: 0.5rem;
 }
 header > div {
-    height: calc(50vw - 2ex);
-    max-height: calc(600px - 2ex);
-    flex: 1;
-    min-width: 30rem;
-    margin: 1ex;
+    margin: 0.5rem;
 }
 header > div:first-child {
+    flex: 1;
+    min-width: 12rem;
     background-image: url(assets/pro.jpg);
     background-size: cover;
     background-position: center;
@@ -36,9 +32,10 @@ header > div:first-child {
     box-shadow: 0 0 10px 0 rgba(0,0,0,.7);
 }
 header > div:last-child {
+    flex: 3;
     display: flex;
+    min-width: 30rem;
     flex-direction: column;
-    margin-left: 1ex;
     box-shadow: 0 0 10px 0 rgba(0,0,0,.7);
     background-image: url(assets/noise.png);
     background-color: hsl(230, 10%, 30%);
@@ -46,7 +43,7 @@ header > div:last-child {
 header h1 {
     font-size: 3rem;
     font-weight: 600;
-    margin: 2.5rem 2rem 1.5rem 2rem;
+    margin: 2rem 2rem 1.5rem 2rem;
     filter: drop-shadow(2px 2px 4px black);
 }
 header ul {
@@ -63,9 +60,8 @@ header ul img {
     user-select: none;
 }
 .links {
-    margin-top: auto;
+    margin-top: 3em;
     display: flex;
-    flex-wrap: wrap;
     align-items: baseline;
     justify-content: space-around;
 }
@@ -155,7 +151,7 @@ article a {
     color: white;
 }
 article h3 {
-    margin: 2rem;
+    margin: 1rem 2rem 2rem 2rem;
 }
 article h3 a {
     font-family: monospace;
@@ -177,29 +173,46 @@ article img {
     margin: 1rem auto;
     box-shadow: 0 0 .5rem black;
 }
-
-@media (max-width: 500px) {
+@media (max-width: 45rem) {
+    header > div:last-child {
+        min-width: unset;
+    }
     header h1 {
-        margin-top: 1rem;
+        margin:1rem;
         font-size: 2rem;
     }
     header ul {
         font-size: 1.15rem;
         margin-left: 2rem;
     }
-    header > div {
-        min-width: calc(100vw - 4ex);
-    }
     header > div:last-child {
-        height: unset;
+        min-width: unset;
     }
     .links {
-        margin-top: 1rem;
-        margin-bottom: 1rem;
-        padding: 0 1rem;
+        flex-direction: column;
     }
     .links a {
-        padding: 1ex .5ex;
+        padding: .5em 0 .5em 2em;
         text-align: left;
+        width: 100%;
+    } 
+}
+
+@media (max-width: 35rem) {
+    header {
+        display: block;
+    }
+    header > div {
+        margin: 1rem .5rem
+    }
+    header > div:first-child {
+        height: 15rem;
+        background-position: 50% 42%;
+    }
+    .gotos {
+        margin: 0;
+    }
+    article > * {
+        margin: 0 1rem
     }
 }
