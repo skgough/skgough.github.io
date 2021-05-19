@@ -18,7 +18,7 @@ window.carousel = new Swipe(element, {
         previous.classList.remove('selected')
         current.classList.add('selected')
                
-        buttons[index].parentElement.scrollTo(scrollPosition,0)
+        buttons[index].parentElement.scrollTo({top: 0, left: scrollPosition, behavior: "smooth"})
     }
 });
 let buttons = Array.from(document.querySelectorAll('button'))
