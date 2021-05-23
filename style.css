@@ -86,6 +86,10 @@ header ul img {
     background-color: rgba(255,255,255,0.1);
     box-shadow: inset 0 0 0 1px rgba(255,255,255,0.3);
 }
+.links a[href*="linkedin"] span,
+.links a[href*="github"] span {
+    font-size: 0;
+}
 .projects {
     box-shadow: 0 0 10px 0 rgba(0,0,0,.7);
     background-image: url(assets/noise.png);
@@ -212,7 +216,17 @@ article img {
     .gotos {
         margin: 0;
     }
+    .projects h2 {
+        padding: 2rem
+    }
+    .swipe {
+        margin: 0;
+    }
+    article > h3 {
+        margin: 1.5rem;
+    }
     article > * {
-        margin: 0 1rem
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
     }
 }
