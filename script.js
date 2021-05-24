@@ -1,7 +1,7 @@
-var element = document.querySelector('.swipe')
-window.carousel = new Swipe(element, {
+const articles = document.querySelector('.swipe')
+window.carousel = new Swipe(articles, {
     startSlide: 0,
-    draggable: true,
+    draggable: false,
     autoRestart: false,
     continuous: false,
     disableScroll: false,
@@ -19,9 +19,10 @@ window.carousel = new Swipe(element, {
         current.classList.add('selected')
                
         buttons[index].parentElement.scrollTo({top: 0, left: scrollPosition, behavior: "smooth"})
+
     }
 });
-let buttons = Array.from(document.querySelectorAll('button'))
+const buttons = Array.from(document.querySelectorAll('button'))
 for (const index in buttons) {
     buttons[index].addEventListener('click', () => {
         carousel.slide(index)
